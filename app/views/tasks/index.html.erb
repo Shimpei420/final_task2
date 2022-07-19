@@ -1,0 +1,15 @@
+<body>
+ <div class = "upper-content">
+    <%= form_with url: "/tasks", method: :post, local: true do |form| %>
+      <%= form.text_field :content, class:"text_bar" %>
+      <%= form.submit "POST", class:"post_btn" %>
+    <% end %>
+ </div>
+ <div class = "bottom-content">
+  <% @tasks.each do |task| %>
+   <div class = "index-bar">
+    <%= task.content %>
+   </div>
+   <% end %>
+ </div>
+</body>
